@@ -15,7 +15,7 @@ class Search extends Component
     {
         $results = [];
         if (strlen($this->search) > 0) {
-            $results = auth()->user()->tasks()->where('title', 'like', '%' . $this->search . '%')->get();
+            $results = auth()->user()->tasks()->where('title', 'like', '%' . $this->search . '%')->orWhere('description', 'like', '%' . $this->search . '%')->get();
         }
         return view('livewire.search', compact('results'));
     }

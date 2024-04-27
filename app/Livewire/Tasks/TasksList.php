@@ -48,13 +48,13 @@ class TasksList extends Component
             ->get();
     }
 
-    #[On('task-created')]
     public function taskCreated()
     {
         unset($this->tasksByStatus);
     }
-
-
+    
+    
+    #[On('task-created')]
     public function render()
     {
         return view('livewire.tasks.tasks-list');

@@ -43,7 +43,8 @@
 
                                     @foreach ($results as $result)
                                         <div class="cursor-pointer py-2 px-3 hover:bg-slate-100">
-                                            <p class="text-sm font-medium text-gray-600">{{ $result->title }}</p>
+                                            <p class="text-sm font-medium text-black-600">{{ $result->title }}</p>
+                                            <small class="text-sm font-medium text-gray-600">{{ $result->description }}</small>
                                         </div>
                                     @endforeach
                                 </div>
